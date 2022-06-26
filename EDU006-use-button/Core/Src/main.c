@@ -108,6 +108,13 @@ int main(void)
   while (1)
   {
 	  buttonState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1);
+	  if (buttonState == 1) {
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
+
+	} else {
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+
+	}
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
 
