@@ -107,6 +107,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  buttonState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1);
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
 
